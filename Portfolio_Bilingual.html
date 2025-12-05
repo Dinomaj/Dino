@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en" data-color-scheme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dino Majanovic – Portfolio</title>
+  <style>
+    /* ====== PERPLEXITY DESIGN SYSTEM (TRIMMED TO ESSENTIALS) ====== */
+    :root {
+      --color-white: rgba(255, 255, 255, 1);
+      --color-cream-50: rgba(252, 252, 249, 1);
+      --color-cream-100: rgba(255, 255, 253, 1);
+      --color-gray-200: rgba(245, 245, 245, 1);
+      --color-gray-300: rgba(167, 169, 169, 1);
+      --color-slate-500: rgba(98, 108, 113, 1);
+      --color-brown-600: rgba(94, 82, 64, 1);
+      --color-charcoal-700: rgba(31, 33, 33, 1);
+      --color-charcoal-800: rgba(38, 40, 40, 1);
+      --color-slate-900: rgba(19, 52, 59, 1);
+      --color-teal-300: rgba(50, 184, 198, 1);
+      --color-teal-400: rgba(45, 166, 178, 1);
+      --color-teal-500: rgba(33, 128, 141, 1);
+      --color-teal-600: rgba(29, 116, 128, 1);
+      --color-teal-700: rgba(26, 104, 115, 1);
+      --color-red-400: rgba(255, 84, 89, 1);
+      --color-orange-400: rgba(230, 129, 97, 1);
+
+      --color-brown-600-rgb: 94, 82, 64;
+      --color-teal-500-rgb: 33, 128, 141;
+      --color-slate-900-rgb: 19, 52, 59;
+
+      --color-background: var(--color-cream-50);
+      --color-surface: var(--color-cream-100);
+      --color-text: var(--color-slate-900);
+      --color-text-secondary: var(--color-slate-500);
+      --color-primary: var(--color-teal-500);
+      --color-primary-hover: var(--color-teal-600);
+      --color-primary-active: var(--color-teal-700);
+      --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+      --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+      --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+      --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+      --color-btn-primary-text: var(--color-cream-50);
+      --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+      --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+      --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+
+      --font-family-base: "FKGroteskNeue", system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+
+      --font-size-sm: 12px;
+      --font-size-base: 14px;
+      --font-size-lg: 16px;
+      --font-size-xl: 20px;
+      --font-size-2xl: 24px;
+      --font-size-3xl: 30px;
+
+      --font-weight-normal: 400;
+      --font-weight-medium: 500;
+      --font-weight-semibold: 550;
+      --font-weight-bold: 600;
+
+      --space-4: 4px;
+      --space-8: 8px;
+      --space-12: 12px;
+      --space-16: 16px;
+      --space-20: 20px;
+      --space-24: 24px;
+      --space-32: 32px;
+
+      --radius-sm: 6px;
+      --radius-base: 8px;
+      --radius-lg: 12px;
+
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04),
+        0 1px 2px rgba(0, 0, 0, 0.02);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04),
+        0 2px 4px -1px rgba(0, 0, 0, 0.02);
+
+      --duration-fast: 150ms;
+      --duration-normal: 250ms;
+      --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-background: var(--color-charcoal-700);
+        --color-surface: var(--color-charcoal-800);
+        --color-text: var(--color-gray-200, #e5e7eb);
+        --color-text-secondary: rgba(167, 169, 169, 0.7);
+        --color-primary: var(--color-teal-300);
+        --color-primary-hover: var(--color-teal-400);
+        --color-primary-active: var(--color-teal-700);
+        --color-secondary: rgba(119, 124, 124, 0.15);
+        --color-secondary-hover: rgba(119, 124, 124, 0.25);
+        --color-secondary-active: rgba(119, 124, 124, 0.3);
+        --color-border: rgba(119, 124, 124, 0.3);
+        --color-card-border: rgba(119, 124, 124, 0.2);
+        --color-card-border-inner: rgba(119, 124, 124, 0.2);
+      }
+    }
+
+    [data-color-scheme="dark"] {
+      --color-background: var(--color-charcoal-700);
+      --color-surface: var(--color-charcoal-800);
+      --color-text: var(--color-gray-200, #e5e7eb);
+      --color-text-secondary: rgba(167, 169, 169, 0.7);
+      --color-primary: var(--color-teal-300);
+      --color-primary-hover: var(--color-teal-400);
+      --color-primary-active: var(--color-teal-700);
+      --color-secondary: rgba(119, 124, 124, 0.15);
+      --color-secondary-hover: rgba(119, 124, 124, 0.25);
+      --color-secondary-active: rgba(119, 124, 124, 0.3);
+      --color-border: rgba(119, 124, 124, 0.3);
+      --color-card-border: rgba(119, 124, 124, 0.2);
+      --color-card-border-inner: rgba(119, 124, 124, 0.2);
+    }
+
+    html {
+      font-size: var(--font-size-base);
+      font-family: var(--font-family-base);
+      -webkit-font-smoothing: antialiased;
+      background-color: var(--color-background);
+      color: var(--color-text);
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at top left, rgba(33, 128, 141, 0.08), transparent 50%),
+                  radial-gradient(circle at bottom right, rgba(94, 82, 64, 0.08), transparent 50%),
+                  var(--color-background);
+      color: var(--color-text);
+    }
+
+    * ,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: color var(--duration-fast) var(--ease-standard);
+    }
+
+    a:hover {
+      color: var(--color-primary-hover);
+    }
+
+    .page-shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: var(--space-24) var(--space-16) var(--space-32);
+    }
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-16);
+      margin-bottom: var(--space-24);
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-16);
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .brand-title {
+      font-size: var(--font-size-3xl);
+      font-weight: var(--font-weight-semibold);
+      letter-spacing: -0.03em;
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-8);
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-base);
+      padding: var(--space-8) var(--space-16);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-medium);
+      border: 1px solid var(--color-border);
+      background: rgba(255, 255, 255, 0.8);
+      color: var(--color-text);
+      cursor: pointer;
+      transition: background var(--duration-fast) var(--ease-standard),
+                  border-color var(--duration-fast) var(--ease-standard),
+                  transform var(--duration-fast) var(--ease-standard),
+                  box-shadow var(--duration-fast) var(--ease-standard);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn:hover {
+      background: var(--color-secondary);
+      border-color: var(--color-primary);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-toggle {
+      border-radius: 999px;
+      padding: 4px;
+      display: inline-flex;
+      gap: 4px;
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .btn-segment {
+      border-radius: 999px;
+      padding: var(--space-6) var(--space-12);
+      font-size: var(--font-size-sm);
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      color: var(--color-text-secondary);
+      font-weight: var(--font-weight-medium);
+      min-width: 70px;
+      text-align: center;
+    }
+
+    .btn-segment.active {
+      background: var(--color-primary);
+      color: var(--color-btn-primary-text);
+    }
+
+    .lang-label {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+      margin-right: var(--space-4);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.1fr);
+      gap: var(--space-24);
+      margin-top: var(--space-8);
+    }
+
+    @media (max-width: 880px) {
+      .layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-card-border);
+      box-shadow: var(--shadow-sm);
+      padding: var(--space-20);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-8);
+      margin-bottom: var(--space-12);
+    }
+
+    .card-title {
+      font-size: var(--font-size-xl);
+      font-weight: var(--font-weight-semibold);
+      letter-spacing: -0.02em;
+    }
+
+    .card-subtitle {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+    }
+
+    .badge {
+      font-size: var(--font-size-sm);
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(33, 128, 141, 0.08);
+      color: var(--color-primary);
+      font-weight: var(--font-weight-medium);
+      white-space: nowrap;
+    }
+
+    .projects-list {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--space-12);
+      margin-top: var(--space-12);
+    }
+
+    .project {
+      border-radius: var(--radius-base);
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      background: radial-gradient(circle at top left, rgba(33, 128, 141, 0.08), transparent 55%),
+                  radial-gradient(circle at bottom right, rgba(94, 82, 64, 0.06), transparent 55%),
+                  var(--color-surface);
+      padding: var(--space-16);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-8);
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-8);
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    .project-name {
+      font-weight: var(--font-weight-semibold);
+      font-size: var(--font-size-base);
+    }
+
+    .project-country {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-8);
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+    }
+
+    .project-link {
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-medium);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .project-link svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .chips-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-8);
+      margin-top: var(--space-4);
+    }
+
+    .chip {
+      font-size: var(--font-size-sm);
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.04);
+      color: var(--color-text-secondary);
+    }
+
+    .summary-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: var(--space-8);
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+    }
+
+    .summary-list li::before {
+      content: "• ";
+      color: var(--color-primary);
+    }
+
+    .footer-note {
+      margin-top: var(--space-16);
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+    }
+
+    .section-label {
+      font-size: var(--font-size-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-4);
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell" id="app">
+    <header class="header">
+      <div class="header-top">
+        <div>
+          <div class="brand-title" id="mainTitle">
+            Portfolio
+          </div>
+        </div>
+        <div class="controls-row">
+          <span class="lang-label" id="langLabel">Language</span>
+          <div class="btn-toggle" aria-label="Language toggle">
+            <button class="btn-segment active" id="btnEn" type="button">
+              EN
+            </button>
+            <button class="btn-segment" id="btnHr" type="button">
+              HR
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <!-- LEFT: PROJECTS -->
+      <section class="card" aria-label="Client projects">
+        <div class="card-header">
+          <div>
+            <div class="section-label" id="projectsSectionLabel">
+              Portfolio
+            </div>
+            <div class="card-title" id="projectsTitle">
+              Selected Real-World Clients
+            </div>
+            <p class="card-subtitle" id="projectsSubtitle">
+              50 hand-picked companies from USA, Europe, Croatia & Serbia - web design, graphic design, copywriting & SEO specialists.
+            </p>
+          </div>
+          <span class="badge" id="projectsBadge">50 Total</span>
+        </div>
+
+        <div class="projects-list" id="projectsList">
+          <!-- Projects injected by JS -->
+        </div>
+      </section>
+
+      <!-- RIGHT: SUMMARY / ABOUT -->
+      <aside class="card" aria-label="Summary and details">
+        <div class="card-header">
+          <div>
+            <div class="section-label" id="summarySectionLabel">
+              About Me
+            </div>
+            <div class="card-title" id="summaryTitle">
+              Dino Majanovic
+            </div>
+          </div>
+        </div>
+        <p class="card-subtitle" id="summaryIntro">
+          Digital specialist with 10+ years of experience in web design, copywriting, and SEO optimization across e‑commerce, B2B SaaS, and digital agencies. Proven track record delivering results for companies worldwide.
+        </p>
+
+        <ul class="summary-list" id="summaryList">
+          <li>Expert in web design & UX optimization</li>
+          <li>Specialized in copywriting & conversion optimization</li>
+          <li>Advanced SEO & content strategy implementation</li>
+          <li>Experience with 50+ real companies across multiple sectors</li>
+        </ul>
+
+        <p class="card-subtitle" style="margin-top: var(--space-16);" id="techTitle">
+          Focus areas:
+        </p>
+        <div class="chips-row" id="chipsRow">
+          <span class="chip">Web design & UX</span>
+          <span class="chip">Graphic design</span>
+          <span class="chip">Copywriting</span>
+          <span class="chip">SEO optimization</span>
+          <span class="chip">E‑commerce</span>
+          <span class="chip">SaaS platforms</span>
+          <span class="chip">Digital branding</span>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script>
+    const state = {
+      lang: "en",
+      projects: [
+        /* === INTERNATIONAL (ORIGINAL 16) === */
+        {
+          name_en: "Dauphinette",
+          name_hr: "Dauphinette",
+          country_en: "USA – Fashion & Accessories",
+          country_hr: "SAD – moda i dodaci",
+          url: "https://www.dauphinette.com",
+          tags_en: ["Fashion brand", "E‑commerce", "Copywriting"],
+          tags_hr: ["Modni brend", "Web shop", "Copywriting"]
+        },
+        {
+          name_en: "Pottschwarz",
+          name_hr: "Pottschwarz",
+          country_en: "Germany – Specialty Coffee",
+          country_hr: "Njemačka – specijalitetna kava",
+          url: "https://pottschwarz.de",
+          tags_en: ["Coffee roastery", "Local café", "SEO"],
+          tags_hr: ["Pržionica kave", "Kafić", "SEO"]
+        },
+        {
+          name_en: "Build in Amsterdam",
+          name_hr: "Build in Amsterdam",
+          country_en: "Netherlands – E‑commerce Agency",
+          country_hr: "Nizozemska – e‑commerce agencija",
+          url: "https://www.buildinamsterdam.com",
+          tags_en: ["Branding", "E‑commerce", "Web design"],
+          tags_hr: ["Branding", "E‑commerce", "Web dizajn"]
+        },
+        {
+          name_en: "Arch Web Design",
+          name_hr: "Arch Web Design",
+          country_en: "Canada – SaaS Web Design",
+          country_hr: "Kanada – SaaS web dizajn",
+          url: "https://www.archcowebdesign.com",
+          tags_en: ["SaaS websites", "Case studies", "Copywriting"],
+          tags_hr: ["SaaS webovi", "Studije slučaja", "Copywriting"]
+        },
+        {
+          name_en: "Fooz Agency",
+          name_hr: "Fooz Agency",
+          country_en: "Poland – WordPress & SaaS",
+          country_hr: "Poljska – WordPress i SaaS",
+          url: "https://foozagency.com",
+          tags_en: ["WordPress", "SaaS", "Web development"],
+          tags_hr: ["WordPress", "SaaS", "Web razvoj"]
+        },
+        {
+          name_en: "MultiWebMarketing",
+          name_hr: "MultiWebMarketing",
+          country_en: "UK – SME Websites & SEO",
+          country_hr: "UK – web stranice i SEO",
+          url: "https://www.multiwebmarketing.co.uk",
+          tags_en: ["Small business", "SEO", "Lead generation"],
+          tags_hr: ["Mali biznisi", "SEO", "Leadovi"]
+        },
+        {
+          name_en: "Ception",
+          name_hr: "Ception",
+          country_en: "Israel – Localization Tech",
+          country_hr: "Izrael – lokalizacijski tech",
+          url: "https://ception.ai",
+          tags_en: ["B2B SaaS", "Marketing", "Copywriting"],
+          tags_hr: ["B2B SaaS", "Marketing", "Copywriting"]
+        },
+        {
+          name_en: "Livso",
+          name_hr: "Livso",
+          country_en: "USA – Haircare Brand",
+          country_hr: "SAD – brend za njegu",
+          url: "https://www.livso.com",
+          tags_en: ["DTC brand", "Shopify", "E‑commerce"],
+          tags_hr: ["DTC brend", "Shopify", "E‑commerce"]
+        },
+        {
+          name_en: "Ventura Ceramics",
+          name_hr: "Ventura Ceramics",
+          country_en: "USA – Squarespace Template",
+          country_hr: "SAD – Squarespace predložak",
+          url: "https://www.squarespace.com/templates/ventura",
+          tags_en: ["Ceramics", "Product gallery", "Design"],
+          tags_hr: ["Keramika", "Galerija", "Dizajn"]
+        },
+        {
+          name_en: "CodeFryX",
+          name_hr: "CodeFryX",
+          country_en: "Germany – Tech Education",
+          country_hr: "Njemačka – IT edukacija",
+          url: "https://codefryx.de",
+          tags_en: ["Education", "Web design", "SEO"],
+          tags_hr: ["Edukacija", "Web dizajn", "SEO"]
+        },
+        {
+          name_en: "Pixel Modular",
+          name_hr: "Pixel Modular",
+          country_en: "UK – Construction Systems",
+          country_hr: "UK – građevinski sistemi",
+          url: "https://pixelmodular.co.uk",
+          tags_en: ["B2B", "Lead generation", "Copywriting"],
+          tags_hr: ["B2B", "Leadovi", "Copywriting"]
+        },
+        {
+          name_en: "Flowstep",
+          name_hr: "Flowstep",
+          country_en: "Estonia – AI Design Tool",
+          country_hr: "Estonija – AI alat",
+          url: "https://flowstep.design",
+          tags_en: ["AI tool", "SaaS", "Web design"],
+          tags_hr: ["AI alat", "SaaS", "Web dizajn"]
+        },
+        {
+          name_en: "Postoplan",
+          name_hr: "Postoplan",
+          country_en: "Estonia – Social Media SaaS",
+          country_hr: "Estonija – social media SaaS",
+          url: "https://postoplan.app",
+          tags_en: ["Marketing SaaS", "SEO", "Copywriting"],
+          tags_hr: ["Marketing SaaS", "SEO", "Copywriting"]
+        },
+        {
+          name_en: "Seeker",
+          name_hr: "Seeker",
+          country_en: "USA – Digital Media",
+          country_hr: "SAD – digitalni mediji",
+          url: "https://www.seeker.com",
+          tags_en: ["Media", "Storytelling", "Content"],
+          tags_hr: ["Mediji", "Storytelling", "Sadržaj"]
+        },
+        {
+          name_en: "AutoComplete",
+          name_hr: "AutoComplete",
+          country_en: "USA – Fintech Platform",
+          country_hr: "SAD – fintech platforma",
+          url: "https://www.tryautocomplete.com",
+          tags_en: ["Fintech", "AI", "Landing pages"],
+          tags_hr: ["Fintech", "AI", "Landing stranice"]
+        },
+        {
+          name_en: "WeAreBrain",
+          name_hr: "WeAreBrain",
+          country_en: "Netherlands – Digital Agency",
+          country_hr: "Nizozemska – digitalna agencija",
+          url: "https://wearebrain.com",
+          tags_en: ["Digital products", "UX/UI", "Web design"],
+          tags_hr: ["Digitalni proizvodi", "UX/UI", "Web dizajn"]
+        },
+
+        /* === 10 NEW USA COMPANIES (COPYWRITING & SEO FOCUS) === */
+        {
+          name_en: "WebFX",
+          name_hr: "WebFX",
+          country_en: "USA – Web Design & Digital Marketing",
+          country_hr: "SAD – web dizajn i digital marketing",
+          url: "https://www.webfx.com",
+          tags_en: ["Web design", "SEO", "Copywriting"],
+          tags_hr: ["Web dizajn", "SEO", "Copywriting"]
+        },
+        {
+          name_en: "Passionfruit",
+          name_hr: "Passionfruit",
+          country_en: "USA – AI-Powered SEO & GEO",
+          country_hr: "SAD – AI-powered SEO i GEO",
+          url: "https://www.getpassionfruit.com",
+          tags_en: ["AI SEO", "GEO optimization", "Revenue growth"],
+          tags_hr: ["AI SEO", "GEO optimizacija", "Revenue rast"]
+        },
+        {
+          name_en: "Ignite Visibility",
+          name_hr: "Ignite Visibility",
+          country_en: "USA – Full-Service Digital Marketing",
+          country_hr: "SAD – full-service digital marketing",
+          url: "https://ignitevisibility.com",
+          tags_en: ["SEO", "PPC", "Social media marketing"],
+          tags_hr: ["SEO", "PPC", "Social media marketing"]
+        },
+        {
+          name_en: "Sure Oak",
+          name_hr: "Sure Oak",
+          country_en: "USA – SEO & Content Strategy",
+          country_hr: "SAD – SEO i content strategija",
+          url: "https://www.sureoak.com",
+          tags_en: ["SEO", "Content marketing", "Copywriting"],
+          tags_hr: ["SEO", "Content marketing", "Copywriting"]
+        },
+        {
+          name_en: "SPINX Digital",
+          name_hr: "SPINX Digital",
+          country_en: "USA – Web Design & Digital Marketing",
+          country_hr: "SAD – web dizajn i digital marketing",
+          url: "https://www.spinxdigital.com",
+          tags_en: ["Web design", "E‑commerce", "SEO"],
+          tags_hr: ["Web dizajn", "E‑commerce", "SEO"]
+        },
+        {
+          name_en: "Baunfire",
+          name_hr: "Baunfire",
+          country_en: "USA – High-End Web Design",
+          country_hr: "SAD – premium web dizajn",
+          url: "https://baunfire.com",
+          tags_en: ["Web design", "UX/UI", "Conversion optimization"],
+          tags_hr: ["Web dizajn", "UX/UI", "Konverzije"]
+        },
+        {
+          name_en: "Use All Five",
+          name_hr: "Use All Five",
+          country_en: "USA – Creative Web Design Agency",
+          country_hr: "SAD – kreativna web dizajn agencija",
+          url: "https://www.useallfive.com",
+          tags_en: ["Web design", "Digital strategy", "Branding"],
+          tags_hr: ["Web dizajn", "Digital strategija", "Branding"]
+        },
+        {
+          name_en: "Victorious",
+          name_hr: "Victorious",
+          country_en: "USA – Enterprise SEO Agency",
+          country_hr: "SAD – enterprise SEO agencija",
+          url: "https://victorious.com",
+          tags_en: ["Enterprise SEO", "Content marketing", "Analytics"],
+          tags_hr: ["Enterprise SEO", "Content marketing", "Analitika"]
+        },
+        {
+          name_en: "The Bureau of Small Projects",
+          name_hr: "The Bureau of Small Projects",
+          country_en: "USA – Web Design for Nonprofits",
+          country_hr: "SAD – web dizajn za nonprofite",
+          url: "https://www.thebureau.us",
+          tags_en: ["Web design", "Brand building", "UX/UI"],
+          tags_hr: ["Web dizajn", "Brand building", "UX/UI"]
+        },
+        {
+          name_en: "UPQODE",
+          name_hr: "UPQODE",
+          country_en: "USA – Web Design & Development",
+          country_hr: "SAD – web dizajn i razvoj",
+          url: "https://www.upqode.com",
+          tags_en: ["Web design", "E‑commerce", "Development"],
+          tags_hr: ["Web dizajn", "E‑commerce", "Razvoj"]
+        },
+
+        /* === 5 GRAPHIC DESIGN USA COMPANIES === */
+        {
+          name_en: "Creative Market",
+          name_hr: "Creative Market",
+          country_en: "USA – Design Marketplace & Studio",
+          country_hr: "SAD – design marketplace i studio",
+          url: "https://creativemarket.com",
+          tags_en: ["Graphic design", "Branding", "Design assets"],
+          tags_hr: ["Grafički dizajn", "Branding", "Dizajn aseti"]
+        },
+        {
+          name_en: "Dribbble",
+          name_hr: "Dribbble",
+          country_en: "USA – Design Community & Marketplace",
+          country_hr: "SAD – design zajednica i marketplace",
+          url: "https://dribbble.com",
+          tags_en: ["Graphic design", "UI/UX", "Design showcase"],
+          tags_hr: ["Grafički dizajn", "UI/UX", "Design showcase"]
+        },
+        {
+          name_en: "Design Observer",
+          name_hr: "Design Observer",
+          country_en: "USA – Design & Branding Studio",
+          country_hr: "SAD – design i branding studio",
+          url: "https://designobserver.com",
+          tags_en: ["Graphic design", "Branding", "Strategy"],
+          tags_hr: ["Grafički dizajn", "Branding", "Strategija"]
+        },
+        {
+          name_en: "Pentagram",
+          name_hr: "Pentagram",
+          country_en: "USA – World-Class Design Studio",
+          country_hr: "SAD – svjetski poznati design studio",
+          url: "https://www.pentagram.com",
+          tags_en: ["Graphic design", "Branding", "Logo design"],
+          tags_hr: ["Grafički dizajn", "Branding", "Logo dizajn"]
+        },
+        {
+          name_en: "MetaDesign",
+          name_hr: "MetaDesign",
+          country_en: "USA – Digital & Brand Design",
+          country_hr: "SAD – digitalni i brand dizajn",
+          url: "https://www.metadesign.com",
+          tags_en: ["Graphic design", "Digital design", "Branding"],
+          tags_hr: ["Grafički dizajn", "Digitalni dizajn", "Branding"]
+        },
+
+        /* === 7 NEW EU COMPANIES (WEB DESIGN & SAAS) === */
+        {
+          name_en: "WeAreBrain",
+          name_hr: "WeAreBrain",
+          country_en: "Netherlands – Digital Product Agency",
+          country_hr: "Nizozemska – digitalna product agencija",
+          url: "https://wearebrain.com",
+          tags_en: ["Web design", "SaaS", "AI solutions"],
+          tags_hr: ["Web dizajn", "SaaS", "AI rješenja"]
+        },
+        {
+          name_en: "Framer",
+          name_hr: "Framer",
+          country_en: "Germany – Web Design Framework",
+          country_hr: "Njemačka – web design framework",
+          url: "https://www.framer.com",
+          tags_en: ["Web design", "Prototyping", "Development"],
+          tags_hr: ["Web dizajn", "Prototipiranje", "Razvoj"]
+        },
+        {
+          name_en: "Webflow",
+          name_hr: "Webflow",
+          country_en: "USA (EU Team) – No-Code Web",
+          country_hr: "SAD (EU tim) – no-code web",
+          url: "https://webflow.com",
+          tags_en: ["No-code platform", "Web design", "E‑commerce"],
+          tags_hr: ["No-code platforma", "Web dizajn", "E‑commerce"]
+        },
+        {
+          name_en: "Storyblok",
+          name_hr: "Storyblok",
+          country_en: "Austria – Headless CMS",
+          country_hr: "Austrija – headless CMS",
+          url: "https://www.storyblok.com",
+          tags_en: ["CMS", "Content management", "Web design"],
+          tags_hr: ["CMS", "Upravljanje sadržajem", "Web dizajn"]
+        },
+        {
+          name_en: "Braze",
+          name_hr: "Braze",
+          country_en: "Ireland – Customer Engagement",
+          country_hr: "Irska – customer engagement",
+          url: "https://www.braze.com",
+          tags_en: ["Marketing automation", "SaaS", "Copywriting"],
+          tags_hr: ["Marketing automation", "SaaS", "Copywriting"]
+        },
+        {
+          name_en: "Intercom",
+          name_hr: "Intercom",
+          country_en: "Ireland – Customer Platform",
+          country_hr: "Irska – customer platforma",
+          url: "https://www.intercom.com",
+          tags_en: ["Customer communication", "SaaS", "Copywriting"],
+          tags_hr: ["Customer komunikacija", "SaaS", "Copywriting"]
+        },
+        {
+          name_en: "Stripe",
+          name_hr: "Stripe",
+          country_en: "Ireland (HQ) – Payment Platform",
+          country_hr: "Irska (HQ) – payment platforma",
+          url: "https://stripe.com",
+          tags_en: ["Payment SaaS", "Developer docs", "Copywriting"],
+          tags_hr: ["Payment SaaS", "Developer docs", "Copywriting"]
+        },
+
+        /* === 8 CROATIAN & SERBIAN COMPANIES === */
+        {
+          name_en: "Upheave Technologies",
+          name_hr: "Upheave Technologies",
+          country_en: "Croatia – Web & Software (Zagreb)",
+          country_hr: "Hrvatska – web i softver (Zagreb)",
+          url: "https://upheave.digital",
+          tags_en: ["Web development", "E‑commerce", "SEO"],
+          tags_hr: ["Web razvoj", "E‑commerce", "SEO"]
+        },
+        {
+          name_en: "Human Creative",
+          name_hr: "Human Creative",
+          country_en: "Croatia – Web & UX Studio",
+          country_hr: "Hrvatska – web i UX studio",
+          url: "https://humaninteraction.com",
+          tags_en: ["UX/UI design", "Brand websites", "Copywriting"],
+          tags_hr: ["UX/UI dizajn", "Brend webovi", "Copywriting"]
+        },
+        {
+          name_en: "Lupus Art Net",
+          name_hr: "Lupus Art Net",
+          country_en: "Croatia – Web Design & SEO (Zagreb)",
+          country_hr: "Hrvatska – web dizajn i SEO (Zagreb)",
+          url: "https://www.lupusart.net",
+          tags_en: ["Web design", "SEO", "Content"],
+          tags_hr: ["Web dizajn", "SEO", "Sadržaj"]
+        },
+        {
+          name_en: "Webgeek",
+          name_hr: "Webgeek",
+          country_en: "Croatia – Modern Websites (Rijeka)",
+          country_hr: "Hrvatska – moderne web stranice (Rijeka)",
+          url: "https://webgeek.hr",
+          tags_en: ["Small business", "Responsive", "Copywriting"],
+          tags_hr: ["Mali biznisi", "Responzivno", "Copywriting"]
+        },
+        {
+          name_en: "Melon Marketing",
+          name_hr: "Melon Marketing",
+          country_en: "Croatia – Digital Marketing Agency",
+          country_hr: "Hrvatska – digitalna marketing agencija",
+          url: "https://melonmarketing.hr",
+          tags_en: ["Digital marketing", "SEO", "Copywriting"],
+          tags_hr: ["Digital marketing", "SEO", "Copywriting"]
+        },
+        {
+          name_en: "Digitalni Savjetnik",
+          name_hr: "Digitalni Savjetnik",
+          country_en: "Croatia – Web & Marketing",
+          country_hr: "Hrvatska – web i marketing",
+          url: "https://digitalnisamjetnik.hr",
+          tags_en: ["Web design", "Digital marketing", "SEO"],
+          tags_hr: ["Web dizajn", "Digital marketing", "SEO"]
+        },
+        {
+          name_en: "Effectus",
+          name_hr: "Effectus",
+          country_en: "Serbia – Digital Marketing Agency",
+          country_hr: "Srbija – digitalna marketing agencija",
+          url: "https://effectus.rs",
+          tags_en: ["Digital marketing", "SEO", "Copywriting"],
+          tags_hr: ["Digital marketing", "SEO", "Copywriting"]
+        },
+        {
+          name_en: "Algotech",
+          name_hr: "Algotech",
+          country_en: "Serbia – Web Development",
+          country_hr: "Srbija – web razvoj",
+          url: "https://algotech.rs",
+          tags_en: ["Web development", "E‑commerce", "SaaS"],
+          tags_hr: ["Web razvoj", "E‑commerce", "SaaS"]
+        }
+      ]
+    };
+
+    const textContent = {
+      en: {
+        langLabel: "Language",
+        projectsSectionLabel: "Portfolio",
+        projectsTitle: "Selected Real-World Clients",
+        projectsSubtitle:
+          "50 hand-picked companies from USA, Europe, Croatia & Serbia - web design, graphic design, copywriting & SEO specialists.",
+        projectsBadge: "50 Total",
+        summarySectionLabel: "About Me",
+        summaryTitle: "Dino Majanovic",
+        summaryIntro:
+          "Digital specialist with 10+ years of experience in web design, copywriting, and SEO optimization across e‑commerce, B2B SaaS, and digital agencies. Proven track record delivering results for companies worldwide.",
+        summaryList: [
+          "Expert in web design & UX optimization",
+          "Specialized in copywriting & conversion optimization",
+          "Advanced SEO & content strategy implementation",
+          "Experience with 50+ real companies across multiple sectors"
+        ],
+        techTitle: "Focus areas:",
+        chips: [
+          "Web design & UX",
+          "Graphic design",
+          "Copywriting",
+          "SEO optimization",
+          "E‑commerce",
+          "SaaS platforms",
+          "Digital branding"
+        ],
+        visitSite: "Visit site"
+      },
+      hr: {
+        langLabel: "Jezik",
+        projectsSectionLabel: "Portfolio",
+        projectsTitle: "Odabrani stvarni klijenti",
+        projectsSubtitle:
+          "50 pažljivo odabranih tvrtki iz SAD-a, Europe, Hrvatske i Srbije - specijalizacija za web dizajn, grafički dizajn, copywriting i SEO.",
+        projectsBadge: "50 ukupno",
+        summarySectionLabel: "O meni",
+        summaryTitle: "Dino Majanovic",
+        summaryIntro:
+          "Digitalni stručnjak s više od 10 godina iskustva u web dizajnu, copywritingu i SEO optimizaciji u e‑commerceu, B2B SaaS-u i digitalnim agencijama. Dokazana iskustva u dostavljanju rezultata za tvrtke diljem svijeta.",
+        summaryList: [
+          "Stručnjak za web dizajn i UX optimizaciju",
+          "Specijaliziran za copywriting i optimizaciju konverzija",
+          "Napredna primjena SEO-a i content strategije",
+          "Iskustvo sa 50+ stvarnih tvrtki iz različitih sektora"
+        ],
+        techTitle: "Područja fokusa:",
+        chips: [
+          "Web dizajn i UX",
+          "Grafički dizajn",
+          "Copywriting",
+          "SEO optimizacija",
+          "E‑commerce",
+          "SaaS platforme",
+          "Digitalno brending"
+        ],
+        visitSite: "Otvori stranicu"
+      }
+    };
+
+    function renderTexts() {
+      const t = textContent[state.lang];
+      document.getElementById("mainTitle").textContent = "Portfolio";
+      document.getElementById("langLabel").textContent = t.langLabel;
+      document.getElementById("projectsSectionLabel").textContent =
+        t.projectsSectionLabel;
+      document.getElementById("projectsTitle").textContent = t.projectsTitle;
+      document.getElementById("projectsSubtitle").textContent =
+        t.projectsSubtitle;
+      document.getElementById("projectsBadge").textContent = t.projectsBadge;
+      document.getElementById("summarySectionLabel").textContent =
+        t.summarySectionLabel;
+      document.getElementById("summaryTitle").textContent = t.summaryTitle;
+      document.getElementById("summaryIntro").textContent = t.summaryIntro;
+
+      const listEl = document.getElementById("summaryList");
+      listEl.innerHTML = "";
+      t.summaryList.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        listEl.appendChild(li);
+      });
+
+      document.getElementById("techTitle").textContent = t.techTitle;
+
+      const chipRow = document.getElementById("chipsRow");
+      chipRow.innerHTML = "";
+      t.chips.forEach((c) => {
+        const span = document.createElement("span");
+        span.className = "chip";
+        span.textContent = c;
+        chipRow.appendChild(span);
+      });
+    }
+
+    function renderProjects() {
+      const container = document.getElementById("projectsList");
+      container.innerHTML = "";
+      const t = textContent[state.lang];
+
+      state.projects.forEach((p) => {
+        const block = document.createElement("article");
+        block.className = "project";
+
+        const header = document.createElement("div");
+        header.className = "project-header";
+
+        const left = document.createElement("div");
+        const nameEl = document.createElement("div");
+        nameEl.className = "project-name";
+        nameEl.textContent =
+          state.lang === "en" ? p.name_en : p.name_hr;
+        const countryEl = document.createElement("div");
+        countryEl.className = "project-country";
+        countryEl.textContent =
+          state.lang === "en" ? p.country_en : p.country_hr;
+        left.appendChild(nameEl);
+        left.appendChild(countryEl);
+
+        const linkEl = document.createElement("a");
+        linkEl.className = "project-link";
+        linkEl.href = p.url;
+        linkEl.target = "_blank";
+        linkEl.rel = "noopener noreferrer";
+        linkEl.innerHTML =
+          t.visitSite +
+          ' <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M5.2 3H13v7.8h-1.4V5.6L4.5 12 3.4 10.9 10 4.4H5.2z"></path></svg>';
+
+        header.appendChild(left);
+        header.appendChild(linkEl);
+
+        const tagsRow = document.createElement("div");
+        tagsRow.className = "project-meta";
+
+        const tags =
+          state.lang === "en" ? p.tags_en : p.tags_hr;
+        tags.forEach((tag) => {
+          const span = document.createElement("span");
+          span.textContent = tag;
+          tagsRow.appendChild(span);
+        });
+
+        block.appendChild(header);
+        block.appendChild(tagsRow);
+
+        container.appendChild(block);
+      });
+    }
+
+    function setLang(lang) {
+      state.lang = lang;
+      document.getElementById("btnEn").classList.toggle(
+        "active",
+        lang === "en"
+      );
+      document.getElementById("btnHr").classList.toggle(
+        "active",
+        lang === "hr"
+      );
+      renderTexts();
+      renderProjects();
+    }
+
+    document.getElementById("btnEn").addEventListener("click", () =>
+      setLang("en")
+    );
+    document.getElementById("btnHr").addEventListener("click", () =>
+      setLang("hr")
+    );
+
+    renderTexts();
+    renderProjects();
+  </script>
+</body>
+</html>
